@@ -2,18 +2,63 @@
 
 using namespace std;
 
-//Global Variables
-char name[30];
-int year;
-
 //Main Function
 int main()
 {
-    cout<<"Enter your full name: ";
-    cin>>name;
-    cout<<name[0];
+    char name[30];
+    int year;
+
+    cout<<"Enter your first name: ";  //Information prompts
+    cin.getline(name,29);             //Edited to accept white space
     cout<<"Enter your birth year: ";
     cin>>year;
     cout<<endl<<endl;
+    goto MENU;
+
+
+MENU:   //Main Selection Menu
+    cout<<"+-------------------MENU-------------------+"<<endl;
+    cout<<"|  1) Number of characters in your name    |"<<endl;
+    cout<<"|  2) Number of consonants in your name    |"<<endl;
+    cout<<"|  3) Number of vowels in your name        |"<<endl;
+    cout<<"|  4) How old will you be?                 |"<<endl;
+    cout<<"|  5) What is your Chinese zodiac sign?    |"<<endl;
+    cout<<"+------------------------------------------+"<<endl;
+    goto SELECTION;
+
+
+SELECTION:
+    int opt;
+
+    cout<<"Select an option: ";
+    cin>>opt;
+
+    switch(opt)
+    {
+        case 1: goto OPTION1;
+                break;
+        case 2: goto OPTION2;
+                break;
+        case 3: goto OPTION3;
+                break;
+        case 4: goto OPTION4;
+                break;
+        case 5: goto OPTION5;
+                break;
+
+        default: cout<<"Please select a valid option\n\n";
+    }
+
+
+OPTION1:
+
+OPTION2:
+
+OPTION3:
+
+OPTION4:
+
+OPTION5:
+
     return 0;
 }
