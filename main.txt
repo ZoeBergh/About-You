@@ -8,7 +8,7 @@ int main()
     char name[30];
     int year;
 
-    cout<<"Enter your first name: ";  //Information prompts
+    cout<<"Enter your full name: ";  //Information prompts
     cin.getline(name,29);             //Edited to accept white space
     cout<<"Enter your birth year: ";
     cin>>year;
