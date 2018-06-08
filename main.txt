@@ -8,7 +8,7 @@ int main()
     char name[30];
     int year;
 
-    cout<<"Enter your full name: ";  //Information prompts
+    cout<<"Enter your name: ";  //Information prompts
     cin.getline(name,29);             //Edited to accept white space
     cout<<"Enter your birth year: ";
     cin>>year;
@@ -27,7 +27,7 @@ MENU:   //Main Selection Menu
     goto SELECTION;
 
 
-SELECTION:
+SELECTION:  //User selects a menu option
     int opt;
 
     cout<<"Select an option: ";
@@ -35,30 +35,48 @@ SELECTION:
 
     switch(opt)
     {
-        case 1: goto OPTION1;
-                break;
-        case 2: goto OPTION2;
-                break;
-        case 3: goto OPTION3;
-                break;
-        case 4: goto OPTION4;
-                break;
-        case 5: goto OPTION5;
-                break;
+    case 1:
+    {
+        goto OPTION1;
+        break;
+    }
+    case 2:
+    {
+        goto OPTION2;
+        break;
+    }
+    case 3:
+    {
+        goto OPTION3;
+        break;
+    }
+    case 4:
+    {
+        goto OPTION4;
+        break;
+    }
+    case 5:
+    {
+        goto OPTION5;
+        break;
+    }
 
-        default: cout<<"Please select a valid option\n\n";
+    default:
+    {
+        cout<<"Please select a valid option\n\n";
+    }
     }
 
 
-OPTION1:
+OPTION1:    //number of characters
 
-OPTION2:
-
-OPTION3:
-
-OPTION4:
-
-OPTION5:
-
+OPTION2:    //number of consonants
+    goto MENU;
+OPTION3:    //number of vowels
+    goto MENU;
+OPTION4:    //age at certain year
+    goto MENU;
+OPTION5:    //zodiac sign
+    goto MENU;
     return 0;
 }
